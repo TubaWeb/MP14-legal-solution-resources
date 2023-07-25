@@ -9,13 +9,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/6eef40d364.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        .font-garamond{
+            font-family: 'EB Garamond', serif;
+        }
+    </style>
     <!-- custom class created -->
     <script>
         tailwind.config = {
           theme: {
             extend: {
-              colors: {
-                clifford: '#da373d',
+              backgroundImage: {
+                'hero-bg': "url('./images/banner.png')",
               }
             }
           }
@@ -23,11 +32,11 @@
       </script>
 
 </head>
-<body>
+<body class="font-garamond">
     <header>
         <!-- navbar -->
         <nav class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-5">
-            <div class="navbar bg-slate-200">
+            <div class="navbar">
                 <div class="navbar-start">
                   <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -122,6 +131,26 @@
                 </div>
               </div>
         </nav>
+
+        <!-- banner -->
+        <section class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-5 my-5">
+            <div class="hero h-auto mr-0 rounded-xl bg-hero-bg">
+                <div class="hero-overlay bg-opacity-40"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">We Provide Effective Legal Solutions</h1>
+                    <p class="mb-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                    <div class="">
+                        <input class="py-3 pl-2 md:pr-32 md:mr-3 mb-3 rounded-lg cursor-pointer border-none text-black" type="text" placeholder="Search your services">
+                        <button class="btn border-none text-white bg-[#B68C5A]">
+                            Search
+                        </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </section>
     </header>
     <main>
 
